@@ -12,6 +12,12 @@ if [[ -d $polkit_path ]] ; then
 fi
 
 ###
-killall gxkb ; gxkb &
-setxkbmap -layout us,ru,ua &
-setxkbmap -option 'grp:alt_shift_toggle' &
+sh -c "setxkbmap -layout us,ru,ua"
+sh -c "setxkbmap -option 'grp:alt_shift_toggle'"
+
+###
+killall nm-applet ; nm-applet &
+
+###
+killall cbatticon ; cbatticon &
+killall xfce4-power-manager ; xfce4-power-manager &
